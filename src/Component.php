@@ -10,7 +10,13 @@ class Component extends BaseComponent
 {
     public function run(): void
     {
-        echo 'ja';
+        echo 'ja ';
+
+        /**
+         * @var Config $config
+         */
+        $config = $this->getConfig();
+        echo $config->getToken();
     }
 
     protected function getConfigClass(): string
